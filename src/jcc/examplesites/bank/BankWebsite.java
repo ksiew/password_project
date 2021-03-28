@@ -1,7 +1,15 @@
-package password_project;
+package jcc.examplesites.bank;
 
 
-public class Bank extends Website{
+import jcc.examplesites.bank.Bank_Account;
+import jcc.websitetemplate.Account;
+import jcc.websitetemplate.Website;
+
+/**
+ * This website allows users to store their imaginary money
+ *
+ */
+public class BankWebsite extends Website {
 	@Override
 	public void outputData() {
 		// TODO Auto-generated method stub

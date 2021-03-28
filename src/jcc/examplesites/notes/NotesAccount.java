@@ -1,9 +1,11 @@
-package password_project;
+package jcc.examplesites.notes;
+
+import jcc.websitetemplate.Account;
 
 import java.util.ArrayList;
 
 
-public class NotesAccount extends Account{
+public class NotesAccount extends Account {
 	ArrayList<String> notes = new ArrayList<>();
 	public NotesAccount(String pass) {
 		super(pass);
@@ -14,7 +16,7 @@ public class NotesAccount extends Account{
 	}
 	public void removeNote(int index) {
 		if(notes.size() >= index) {
-		notes.remove(index -1 );
+			notes.remove(index -1 );
 		}else {
 			System.out.println("note does not exist");
 		}

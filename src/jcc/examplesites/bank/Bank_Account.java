@@ -1,4 +1,6 @@
-package password_project;
+package jcc.examplesites.bank;
+
+import jcc.websitetemplate.Account;
 
 public class Bank_Account extends Account {
 	double money;

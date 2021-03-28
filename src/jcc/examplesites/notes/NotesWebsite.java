@@ -1,7 +1,14 @@
-package password_project;
+package jcc.examplesites.notes;
 
+import jcc.examplesites.notes.NotesAccount;
+import jcc.websitetemplate.Account;
+import jcc.websitetemplate.Website;
 
-public class Notes extends Website{
+/**
+ * This website allows its users to write down notes, only viewable by them
+ *
+ */
+public class NotesWebsite extends Website {
 	
 	@Override
 	public void addAccount(String name, String pass) {

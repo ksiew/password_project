@@ -1,17 +1,20 @@
-package password_project;
-
+package jcc.websitetemplate;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Scanner;
 
 public abstract class Website extends Web{
+	//List of accounts for the website
 	protected Map<String,Account> accounts = new HashMap<String,Account>();
 	
-	//abstract to add subclass to accounts
+	//abstract to add account to website
 	public abstract void addAccount(String name, String pass);
 
-	
+	/**
+	 * creates a prompt to delete an account, requires username and password
+	 *
+	 * @param name username of account to be deleted
+	 */
 	public void removeAccount(String name) {
 		System.out.println("input password: ");
 		if(scan.next().equals(accounts.get(name).getPassword())) {
@@ -22,8 +25,10 @@ public abstract class Website extends Web{
 		}
 		this.frontPage();
 	}
-	
-	//frontPage will link to Login,addAccount,removeAccount, and exit website
+
+	/**
+	 * frontPage will link to Login,addAccount,removeAccount, and exit website
+	 */
 	public void frontPage() {
 		String u;
 		String p;
@@ -61,6 +66,12 @@ public abstract class Website extends Web{
 				break;
 		}
 	}
+
+	/**
+	 * Users log in through this method, done at front page
+	 *
+	 * @param name Username of account being accessed
+	 */
 	public void logIn(String name) {
 		System.out.println("input password");
 		if(accounts.containsKey(name) && accounts.get(name).getPassword().equals(scan.next())) {
@@ -73,8 +84,12 @@ public abstract class Website extends Web{
 	
 	
 	public abstract void outputData();
-	
-	//run will take place after logged in within the subclass website
+
+	/**
+	 * Running this allows users to access account functions
+	 *
+	 * @param account The account a function is being run on
+	 */
 	public abstract void run(Account account);
 	
 	
