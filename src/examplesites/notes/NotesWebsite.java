@@ -1,8 +1,7 @@
-package jcc.examplesites.notes;
+package examplesites.notes;
 
-import jcc.examplesites.notes.NotesAccount;
-import jcc.websitetemplate.Account;
-import jcc.websitetemplate.Website;
+import websitetemplate.Account;
+import websitetemplate.Website;
 
 /**
  * This website allows its users to write down notes, only viewable by them

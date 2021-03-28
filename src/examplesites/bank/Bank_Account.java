@@ -1,7 +1,11 @@
-package jcc.examplesites.bank;
+package examplesites.bank;
 
-import jcc.websitetemplate.Account;
+import websitetemplate.Account;
 
+/**
+ * This account is for banks, money can be deposited, withdrawn, or viewed
+ *
+ */
 public class Bank_Account extends Account {
 	double money;
 	public Bank_Account(String pass,double cash) {

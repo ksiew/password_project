@@ -1,9 +1,8 @@
-package jcc.examplesites.bank;
+package examplesites.bank;
 
 
-import jcc.examplesites.bank.Bank_Account;
-import jcc.websitetemplate.Account;
-import jcc.websitetemplate.Website;
+import websitetemplate.Account;
+import websitetemplate.Website;
 
 /**
  * This website allows users to store their imaginary money

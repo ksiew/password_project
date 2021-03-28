@@ -1,8 +1,14 @@
-package jcc.websitetemplate;
+package websitetemplate;
 
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * The template for websites
+ *
+ * To create a new website, have the class extend Website and add it to the Web class
+ *
+ */
 public abstract class Website extends Web{
 	//List of accounts for the website
 	protected Map<String,Account> accounts = new HashMap<String,Account>();
@@ -82,11 +88,12 @@ public abstract class Website extends Web{
 		}
 	}
 	
-	
+
+	//TODO: do something with this
 	public abstract void outputData();
 
 	/**
-	 * Running this allows users to access account functions
+	 * Prompts the user to enter a string for whichever account function they want to use
 	 *
 	 * @param account The account a function is being run on
 	 */

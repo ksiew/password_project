@@ -1,8 +1,10 @@
-package jcc.websitetemplate;
+package websitetemplate;
 
 /**
  * Contains login data for website accounts, subclasses will implement their own custom fields required
  * for their website
+ *
+ * Each new Website requires a matching Account
  *
  */
 public  class Account {

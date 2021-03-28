@@ -1,6 +1,6 @@
-package jcc.examplesites.notes;
+package examplesites.notes;
 
-import jcc.websitetemplate.Account;
+import websitetemplate.Account;
 
 import java.util.ArrayList;
 
