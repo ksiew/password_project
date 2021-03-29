@@ -2,7 +2,6 @@ package examplesites.bank;
 
 
 import websitetemplate.Account;
-import websitetemplate.Web;
 import websitetemplate.Website;
 
 /**
@@ -14,6 +13,7 @@ public class BankWebsite extends Website {
 		super();
 		url = "BANK";
 	}
+
 
 	@Override
 	public void outputData() {
