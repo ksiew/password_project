@@ -2,6 +2,7 @@ package examplesites.bank;
 
 
 import websitetemplate.Account;
+import websitetemplate.Web;
 import websitetemplate.Website;
 
 /**
@@ -9,6 +10,11 @@ import websitetemplate.Website;
  *
  */
 public class BankWebsite extends Website {
+	public BankWebsite(){
+		super();
+		url = "BANK";
+	}
+
 	@Override
 	public void outputData() {
 		// TODO Auto-generated method stub
@@ -22,24 +28,24 @@ public class BankWebsite extends Website {
 		switch(scan.next()) {
 			case "DEPOSIT":
 				System.out.println("How much would you like to deposit?");              ;
-				((Bank_Account)account).deposit(scan.nextDouble());
+				((BankAccount)account).deposit(scan.nextDouble());
 				this.run(account);
 				break;
 				
 			case "WITHDRAW":
 				System.out.println("How much would you like to withdraw?");              ;
-				((Bank_Account)account).withdraw(scan.nextDouble());
+				((BankAccount)account).withdraw(scan.nextDouble());
 				this.run(account);
 				break;
 				
 			case "VIEW":
-				System.out.println("You have " + ((Bank_Account) account).getMoney() + " dollars");              ;
+				System.out.println("You have " + ((BankAccount) account).getMoney() + " dollars");              ;
 				this.run(account);
 				break;
 				
 			case "EXIT":
 				System.out.println("exiting...");
-				this.frontPage();
+				this.LoginScreen();
 				break;
 				
 
@@ -58,7 +64,7 @@ public class BankWebsite extends Website {
 			System.out.println("name already taken");
 		}else {
 			System.out.println("how much money?");
-			accounts.put(name, new Bank_Account(pass,scan.nextDouble()));
+			accounts.put(name, new BankAccount(pass,scan.nextDouble()));
 		}
 		
 	}

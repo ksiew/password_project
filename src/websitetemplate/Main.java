@@ -1,3 +1,5 @@
+package websitetemplate;
+
 import websitetemplate.Web;
 
 import java.util.Scanner;

@@ -6,9 +6,9 @@ import websitetemplate.Account;
  * This account is for banks, money can be deposited, withdrawn, or viewed
  *
  */
-public class Bank_Account extends Account {
+public class BankAccount extends Account {
 	double money;
-	public Bank_Account(String pass,double cash) {
+	public BankAccount(String pass, double cash) {
 		super(pass);
 		money = cash;
 	}

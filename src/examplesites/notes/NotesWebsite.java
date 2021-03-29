@@ -1,6 +1,7 @@
 package examplesites.notes;
 
 import websitetemplate.Account;
+import websitetemplate.Web;
 import websitetemplate.Website;
 
 /**
@@ -8,6 +9,10 @@ import websitetemplate.Website;
  *
  */
 public class NotesWebsite extends Website {
+	public NotesWebsite(){
+		super();
+		url = "NOTES";
+	}
 	
 	@Override
 	public void addAccount(String name, String pass) {
@@ -50,7 +55,7 @@ public class NotesWebsite extends Website {
 				
 			case "EXIT":
 				System.out.println("exiting...");
-				this.frontPage();
+				this.LoginScreen();
 				break;
 			
 			default:

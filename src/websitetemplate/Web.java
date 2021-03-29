@@ -2,7 +2,7 @@ package websitetemplate;
 
 import examplesites.bank.BankWebsite;
 import examplesites.notes.NotesWebsite;
-
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -11,27 +11,28 @@ import java.util.Scanner;
  */
 public class Web {
 	protected Scanner scan = new Scanner(System.in);
-
-	//add new websites here using: static Website *name* = new *class*
-	static Website bank = new BankWebsite();
-	static Website notes = new NotesWebsite();
+	ArrayList<Website> websiteList = new ArrayList<>();
+	//add new websites here using
+	public Web() {
+		websiteList.add(new BankWebsite());
+		websiteList.add(new NotesWebsite());
+	}
 
 	/**
 	 * Asks the user which Website they want to go to
 	 *
 	 */
 	public void online() {
-		System.out.println("Which website would you like to visit? \n BANK \n NOTES");
-		switch(scan.next()) {
-			case "BANK":
-				bank.frontPage();
-				break;
-			case "NOTES":
-				notes.frontPage();
-				break;
-			default:
-				System.out.println("error");
-				this.online();
+		System.out.println("Which website would you like to visit?");
+		for(int i = 0; i < websiteList.size(); i ++){
+			System.out.println(websiteList.get(i).getUrl());
 		}
+		String input = scan.next();
+		for(int i = 0; i < websiteList.size(); i ++){
+			if(input.equals(websiteList.get(i).getUrl())){
+				websiteList.get(i).LoginScreen();
+			}
+		}
+		this.online();
 	}
 }
