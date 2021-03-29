@@ -27,19 +27,19 @@ public class BankWebsite extends Website {
 				+  "\n VIEW account \n EXIT bank");
 		switch(scan.next()) {
 			case "DEPOSIT":
-				System.out.println("How much would you like to deposit?");              ;
+				System.out.println("How much would you like to deposit?");
 				((BankAccount)account).deposit(scan.nextDouble());
 				this.run(account);
 				break;
 				
 			case "WITHDRAW":
-				System.out.println("How much would you like to withdraw?");              ;
+				System.out.println("How much would you like to withdraw?");
 				((BankAccount)account).withdraw(scan.nextDouble());
 				this.run(account);
 				break;
 				
 			case "VIEW":
-				System.out.println("You have " + ((BankAccount) account).getMoney() + " dollars");              ;
+				System.out.println("You have " + ((BankAccount) account).getMoney() + " dollars");
 				this.run(account);
 				break;
 				

@@ -3,7 +3,6 @@ package websitetemplate;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
-import websitetemplate.Web;
 
 /**
  * The template for websites
@@ -13,7 +12,6 @@ import websitetemplate.Web;
  */
 public abstract class Website{
 	protected Scanner scan = new Scanner(System.in);
-	protected Web domain;
 	//List of accounts for the website
 	protected Map<String,Account> accounts = new HashMap<String,Account>();
 	//If a user enters a website's url in the Web, they will be taken to that website
