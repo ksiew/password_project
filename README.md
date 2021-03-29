@@ -19,8 +19,12 @@ superclasses and interfaces, learning how to plan out my classes before
 working to minimize repetitive code.
 
 # Changelog
-**V 0.1** Project is functional and contains two websites
+**V 0.1:** Project is functional and contains two websites
 
 **V 0.15:** 
 Changed Web, now instead of having to manually add each new Website as a static object and as a FrontPage case, now new websites can be added just by adding them to the list in the web constructor.
+
+# Plans
+* add documentation
+* Group up user prompting methods
 
