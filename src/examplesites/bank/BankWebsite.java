@@ -9,6 +9,7 @@ import websitetemplate.Website;
  *
  */
 public class BankWebsite extends Website {
+	
 	@Override
 	public void outputData() {
 		// TODO Auto-generated method stub
