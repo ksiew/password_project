@@ -10,9 +10,27 @@ package websitetemplate;
 public  class Account {
 	protected String password;
 	public Account(String pass) {
-		password = pass;
+		password = encryption(pass);
 	}
 
+    /**
+     * This method provides a simple encryption to a password to prevent it from being easily
+     * accessed
+     *
+     * @param input actual password
+     * @return encrypted password
+     */
+
+	private String encryption(String input){
+	    StringBuilder str = new StringBuilder();
+	    int temp;
+	    for(int i = 0; i < input.length(); i ++){
+	        temp = ((int)input.charAt(i) + 1);
+	        str.append((char)temp);
+        }
+	    System.out.println(str);
+	    return str.toString();
+    }
 	/**
 	 * returns true if the password given is the same as the password tied to the account
 	 *
@@ -25,7 +43,7 @@ public  class Account {
 		if(pass == "Admin") {
 			return true;
 		}
-		return pass == password;
+		return encryption(pass).equals(password);
 	}
 
 	public String getPassword() {

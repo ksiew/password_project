@@ -7,20 +7,21 @@ import java.util.Scanner;
 
 /**
  * The Web class links together Websites and allows access to them
- *
  */
 public class Web {
 	protected Scanner scan = new Scanner(System.in);
 	ArrayList<Website> websiteList = new ArrayList<>();
-	//add new websites here using
+
+	/**
+	 * adds Websites to the websiteList
+	 */
 	public Web() {
 		websiteList.add(new BankWebsite());
 		websiteList.add(new NotesWebsite());
 	}
 
 	/**
-	 * Asks the user which Website they want to go to
-	 *
+	 * Asks the user which Website they want to go to, repeating if no valid url is given
 	 */
 	public void online() {
 		System.out.println("Which website would you like to visit?");

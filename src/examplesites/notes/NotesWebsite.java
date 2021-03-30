@@ -13,16 +13,10 @@ public class NotesWebsite extends Website {
 		super();
 		url = "NOTES";
 	}
-	
+
 	@Override
-	public void addAccount(String name, String pass) {
-		// TODO Auto-generated method stub
-		if(accounts.containsKey(name)) {
-			System.out.println("name already taken");
-		}else {
-			System.out.println("account made");
-			accounts.put(name, new NotesAccount(pass));
-		}
+	public Account createAccount(String pass) {
+		return new NotesAccount(pass);
 	}
 
 	@Override
@@ -32,7 +26,6 @@ public class NotesWebsite extends Website {
 	}
 	@Override
 	public void run(Account account) {
-		// TODO Auto-generated method stub
 		System.out.println("Your options are: \n WRITE new note \n REMOVE note \n VIEW note \n EXIT notes");
 		switch(scan.next()) {
 			case "WRITE":

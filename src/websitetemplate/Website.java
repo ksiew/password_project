@@ -1,5 +1,7 @@
 package websitetemplate;
 
+import examplesites.notes.NotesAccount;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -7,17 +9,34 @@ import java.util.Scanner;
 /**
  * The template for websites
  *
- * To create a new website, have the class extend Website and add it to the Web class
+ * To create a new website, have the class extend Website, give it a url
+ * and add it to the Web class constructor
  *
  */
 public abstract class Website{
 	protected Scanner scan = new Scanner(System.in);
+
 	//List of accounts for the website
-	protected Map<String,Account> accounts = new HashMap<String,Account>();
+	protected Map<String,Account> accounts = new HashMap<>();
 	//If a user enters a website's url in the Web, they will be taken to that website
 	protected String url;
 	//abstract to add account to website
-	public abstract void addAccount(String name, String pass);
+	public void addAccount(String name, String pass) {
+		if(accounts.containsKey(name)) {
+			System.out.println("name already taken");
+		}else {
+			accounts.put(name, createAccount(pass));
+			System.out.println("account made");
+		}
+	}
+
+	/**
+	 * This method creates an account to be added to the Website
+	 *
+	 * @param pass password of the account
+	 * @return The account
+	 */
+	public abstract Account createAccount(String pass);
 
 	/**
 	 * creates a prompt to delete an account, requires username and password
@@ -26,7 +45,7 @@ public abstract class Website{
 	 */
 	public void removeAccount(String name) {
 		System.out.println("input password: ");
-		if(scan.next().equals(accounts.get(name).getPassword())) {
+		if(accounts.get(name).check(scan.next())) {
 			System.out.println("account removed");
 			accounts.remove(name);
 		}else {
@@ -35,13 +54,14 @@ public abstract class Website{
 		this.LoginScreen();
 	}
 
-	/**
-	 * LoginScreen will prompt the user allowing them to Login,addAccount,removeAccount, or exit website
-	 */
+
+		/**
+         * LoginScreen will prompt the user allowing them to Login,addAccount,removeAccount, or exit website
+         */
 	public void LoginScreen() {
 		String u;
 		String p;
-		System.out.println("Your options are: \n CREATE account \n DELETE account \n LOGIN \n EXIT");
+		System.out.println("Your options are: \n CREATE account \n DELETE account \n LOGIN \n EXIT " + url);
 		switch(scan.next()) {
 			case "LOGIN":
 				System.out.println("enter username");
@@ -82,7 +102,7 @@ public abstract class Website{
 	 */
 	public void logIn(String name) {
 		System.out.println("input password");
-		if(accounts.containsKey(name) && accounts.get(name).getPassword().equals(scan.next())) {
+		if(accounts.containsKey(name) && accounts.get(name).check(scan.next())) {
 			this.run(accounts.get(name));
 		}else {
 			System.out.println("error logging in");

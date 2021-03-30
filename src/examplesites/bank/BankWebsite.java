@@ -14,6 +14,11 @@ public class BankWebsite extends Website {
 		url = "BANK";
 	}
 
+	@Override
+	public Account createAccount(String pass) {
+		System.out.println("how much money?");
+		return new BankAccount(pass,scan.nextDouble());
+	}
 
 	@Override
 	public void outputData() {
@@ -48,24 +53,11 @@ public class BankWebsite extends Website {
 				this.LoginScreen();
 				break;
 				
-
-				
 			default:
 				System.out.println("error");
 				this.run(account);
-	}
-	
-		
+		}
 	}
 
-	@Override
-	public void addAccount(String name, String pass) {
-		if(accounts.containsKey(name)) {
-			System.out.println("name already taken");
-		}else {
-			System.out.println("how much money?");
-			accounts.put(name, new BankAccount(pass,scan.nextDouble()));
-		}
-		
-	}
+
 }
