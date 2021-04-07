@@ -31,6 +31,7 @@ public abstract class Website{
 	/**
 	 * This method creates an account to be added to the Website
 	 *
+	 *
 	 * @param pass password of the account
 	 * @return The account
 	 */
