@@ -24,6 +24,11 @@ working to minimize repetitive code.
 **V 0.15:** 
 Changed Web, now instead of having to manually add each new Website as a static object and as a FrontPage case, now new websites can be added just by adding them to the list in the web constructor.
 
+**V 0.2:**
+Updated addAccount method to be in superclass Website to streamline the process of adding a new website. Instead of having to create a custom addAccount method in each new Website, only a createAccount method must be made to define any extra steps in the account adding process.
+
+Also added basic encryption for passwords
+
 # Plans
 * add documentation
 * Group up user prompting methods
