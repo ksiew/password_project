@@ -1,7 +1,5 @@
 package websitetemplate;
 
-import examplesites.notes.NotesAccount;
-
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -21,7 +19,7 @@ public abstract class Website{
 	//If a user enters a website's url in the Web, they will be taken to that website
 	protected String url;
 	//abstract to add account to website
-	public void addAccount(String name, String pass) {
+	protected void addAccount(String name, String pass) {
 		if(accounts.containsKey(name)) {
 			System.out.println("name already taken");
 		}else {
@@ -55,9 +53,9 @@ public abstract class Website{
 	}
 
 
-		/**
-         * LoginScreen will prompt the user allowing them to Login,addAccount,removeAccount, or exit website
-         */
+	/**
+	 * LoginScreen will prompt the user allowing them to Login,addAccount,removeAccount, or exit website
+	 */
 	public void LoginScreen() {
 		String u;
 		String p;
@@ -122,6 +120,8 @@ public abstract class Website{
 
 	/**
 	 * Prompts the user to enter a string for whichever account function they want to use
+	 *
+	 * TODO add universal website functions to superclass (EX: EXIT)
 	 *
 	 * @param account The account a function is being run on
 	 */

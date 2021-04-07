@@ -34,19 +34,15 @@ public  class Account {
 	/**
 	 * returns true if the password given is the same as the password tied to the account
 	 *
-	 * Admin account is accessable using the password Admin
+	 * Admin account is accessible using the password Admin
 	 *
 	 * @param pass password being inputted
 	 * @return true if password is correct, false otherwise
 	 */
-	public boolean check(String pass) {
-		if(pass == "Admin") {
+	protected boolean check(String pass) {
+		if(pass.equals("Admin")) {
 			return true;
 		}
 		return encryption(pass).equals(password);
-	}
-
-	public String getPassword() {
-		return password;
 	}
 }

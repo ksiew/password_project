@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 
 public class NotesAccount extends Account {
-	ArrayList<String> notes = new ArrayList<>();
+	private ArrayList<String> notes = new ArrayList<>();
 
 	public NotesAccount(String pass) {
 		super(pass);

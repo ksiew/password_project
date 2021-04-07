@@ -7,7 +7,7 @@ import websitetemplate.Account;
  *
  */
 public class BankAccount extends Account {
-	double money;
+	private double money;
 	public BankAccount(String pass, double cash) {
 		super(pass);
 		money = cash;

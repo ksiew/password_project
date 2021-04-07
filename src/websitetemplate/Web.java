@@ -25,13 +25,13 @@ public class Web {
 	 */
 	public void online() {
 		System.out.println("Which website would you like to visit?");
-		for(int i = 0; i < websiteList.size(); i ++){
-			System.out.println(websiteList.get(i).getUrl());
+		for (Website website : websiteList) {
+			System.out.println(website.getUrl());
 		}
 		String input = scan.next();
-		for(int i = 0; i < websiteList.size(); i ++){
-			if(input.equals(websiteList.get(i).getUrl())){
-				websiteList.get(i).LoginScreen();
+		for (Website website : websiteList) {
+			if (input.equals(website.getUrl())) {
+				website.LoginScreen();
 			}
 		}
 		this.online();
