@@ -116,8 +116,6 @@ public abstract class Website{
 	 */
 	public String getUrl(){ return url; }
 
-	//TODO: do something with this
-	public abstract void outputData();
 
 	/**
 	 * Prompts the user to enter a string for whichever account function they want to use

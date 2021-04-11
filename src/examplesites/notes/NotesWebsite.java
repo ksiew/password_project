@@ -1,7 +1,6 @@
 package examplesites.notes;
 
 import websitetemplate.Account;
-import websitetemplate.Web;
 import websitetemplate.Website;
 
 /**
@@ -19,12 +18,6 @@ public class NotesWebsite extends Website {
 		return new NotesAccount(pass);
 	}
 
-	@Override
-	public void outputData() {
-		// TODO Auto-generated method stub
-		
-	}
-	@Override
 	public void run(Account account) {
 		System.out.println("Your options are: \n WRITE new note \n REMOVE note \n VIEW note \n EXIT notes");
 		switch(scan.next()) {

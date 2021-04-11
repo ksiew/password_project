@@ -21,12 +21,6 @@ public class BankWebsite extends Website {
 	}
 
 	@Override
-	public void outputData() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
 	public void run(Account account) {
 		System.out.println("your options are: \n DEPOSIT money \n WITHDRAW money "
 				+  "\n VIEW account \n EXIT bank");

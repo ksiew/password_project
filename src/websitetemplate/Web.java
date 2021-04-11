@@ -34,6 +34,8 @@ public class Web {
 				website.LoginScreen();
 			}
 		}
-		this.online();
+		if(!input.equals("END")) {
+			this.online();
+		}
 	}
 }
